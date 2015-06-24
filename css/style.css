@@ -178,6 +178,7 @@ header{
 	background: url('../img/mug3.png');
 	background-color: white!important;
 	background-size: cover;
+	background-position: fixed;
 	background-repeat: no-repeat;
 	color: white;
 }
