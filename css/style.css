@@ -100,7 +100,7 @@ header h1,
 .payoff h1,
 .details .carousel,
 .social a:hover{
-	color: #006064
+	color: #F7772A
 }
 
 .features p{
@@ -482,6 +482,7 @@ header .carousel-indicators li {
 .get-it ul li a:hover{
 	color: #3A3A3A;
 	text-decoration: none;
+	
 	cursor: pointer;
 }
 
