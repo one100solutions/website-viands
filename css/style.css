@@ -100,7 +100,7 @@ header h1,
 .payoff h1,
 .details .carousel,
 .social a:hover{
-	color: #f7772a
+	color: #0bf397;
 }
 
 .features p{
@@ -272,6 +272,7 @@ header .carousel-indicators li {
 	font-weight: 300;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 2.8em;
+	color: #006064
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -482,7 +483,6 @@ header .carousel-indicators li {
 .get-it ul li a:hover{
 	color: #3A3A3A;
 	text-decoration: none;
-	
 	cursor: pointer;
 }
 
