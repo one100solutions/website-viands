@@ -18,6 +18,8 @@ _/_/_/_/    _/_/_/  _/    _/    _/_/_/    _/_/_/
 /*-----------------------------------------------------------------------------------*/
 /* GENERAL
 /*-----------------------------------------------------------------------------------*/
+
+
 #tv_container {
     width: 700px; /* Adjust TV image width */
     height: 420px; /* Adjust TV image height */
@@ -130,7 +132,38 @@ nav.navbar{
 
 .navbar-nav{
 	float: right;
+	cursor: pointer;
 }
+.navbar-nav ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.navbar-nav ul.is-visible {
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+}
+
+.navbar-nav a{
+	display: inline-block;
+    height: auto;
+    line-height: normal;
+    background: transparent;
+}
+.navbar-nav a.cd-signin, .main-nav a.cd-signup {
+    padding: .6em 1em;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50em;
+  }
 
 nav.navbar.fixed-to-top{
 	top: 0px;
@@ -166,7 +199,6 @@ nav.navbar.fixed-to-top{
 	font-size: 2em;
 	font-family: 'Roboto Condensed', sans-serif;
 }
-
 
 /*-----------------------------------------------------------------------------------*/
 /* HEADER 

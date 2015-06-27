@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!-- 26/6 -->
-<html>
+<html class="no-js">
   <head>
    <title>Viands</title>
 		
-
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
    <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- CSS 
@@ -16,16 +16,19 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
     <!-- Template Styles -->
     <link href="css/style.css" rel="stylesheet" media="screen">
+	<link href="css/style1.css" rel="stylesheet">
+	
+	<link href="css/reset.css" rel="stylesheet">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-
+<link rel="stylesheet" href="css/style.css">
 <link rel="shortcut icon" href="img/2.png"/>
-
+<script src="js/modernizr.js"></script>
       </head>
   <body>
 	  
 	  <!-- NAVBAR
 	      ================================================== -->
-	  <nav class="navbar navbar-default" role="navigation">
+	 <nav class="navbar navbar-default" role="navigation">
 	  	  <div class="container">
 			  <div class="navbar-header">
 			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -35,25 +38,117 @@
 			      <span class="icon-bar"></span>
 			    </button>
 			    
-			    <!--Replace text with your 'app name or logo image-->
+			    
 			    <img src="img/2.png" style= ""float="left" alt=""  height="40" width="50"/>
-			    <a class="navbar-brand" href="#"><a href="#page-top"></a><font size="4" color="#F7772A" style="position:relative;top:5px;">VIANDS</font></a>
+			    <a class="navbar-brand" href="#"><a href="#page-top"></a><font size="4" color="#F7772A" style="position:absolute;top:25px; left:170px;">VIANDS</font></a>
 			    
 			  </div>
 			  <div class="collapse navbar-collapse navbar-ex1-collapse">
-			    <ul class="nav navbar-nav">
-			      <li><a onclick="$('header').animatescroll({padding:71});">Home</a></li>
+			    <ul class="nav navbar-nav main-nav">
+			     
 			      <li><a onclick="$('.purchase').animatescroll({padding:71});">Download</a></li>
 			      <li><a onclick="$('.payoff').animatescroll({padding:71});">Why Viands</a></li>
 			      <li><a onclick="$('.features').animatescroll({padding:71});">Features</a></li>
 			      <li><a onclick="$('.social').animatescroll({padding:71});">Contact Us	</a></li>
+				  
+				  <li><a class="cd-signin" id="cd-signin" href="#0">Sign in</a></li>
+				<li><a class="cd-signup" id="cd-signin" href="#0">Sign up</a></li>
 			    </ul>
 			  </div>
 		  </div>
-	  </nav>
+	  </nav> 
+	  <div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Sign in</a></li>
+				<li><a href="#0">New account</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Password</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Remember me</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Login">
+					</p>
+				</form>
+				
+				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- sign up form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Password</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Create account">
+					</p>
+				</form>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Reset password">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">Close</a>
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
 	  
-	  
-	   <!-- HEADER
+	 	   <!-- HEADER
 	   ================================================== -->	  
 	  <header>
 		 <div class="container">
@@ -348,7 +443,10 @@ There's finally a way for you to willingly treat your friends without burning a 
 	  	</div>
 	  </section> -->
 	  
-	 
+		
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Gem jQuery -->
+
 	 <!-- JAVASCRIPT
 	     ================================================== -->
     <script src="js/jquery.js"></script>
