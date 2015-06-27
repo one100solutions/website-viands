@@ -102,7 +102,7 @@ header h1,
 .payoff h1,
 .details .carousel,
 .social a:hover{
-	color: #0bf397;
+	color: #f7772a;
 }
 
 .features p{
@@ -159,11 +159,6 @@ nav.navbar{
     line-height: normal;
     background: transparent;
 }
-.navbar-nav a.cd-signin, .main-nav a.cd-signup {
-    padding: .6em 1em;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 50em;
-  }
 
 nav.navbar.fixed-to-top{
 	top: 0px;
@@ -612,3 +607,4 @@ header, .social{
     	color: white;
     }
 }
+
