@@ -1,0 +1,25 @@
+{
+  "name": "website-viands",
+  "version": "0.0.2",
+  "homepage": "https://github.com/one100solutions/website-viands",
+  "authors": [
+    "Akash Shakdwipeea <ashakdwipeea@gmail.com>"
+  ],
+  "description": "Website for viands",
+  "main": "index.html",
+  "keywords": [
+    "Viands",
+    "one100solutions"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.1"
+  }
+}

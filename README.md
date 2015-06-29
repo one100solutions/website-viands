@@ -1,3 +1,6 @@
 ##How to Run
-
->cd to directory and run gulp 
+>cd to directory
+> run 
+- npm install
+- bower install
+- run gulp 
