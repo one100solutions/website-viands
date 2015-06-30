@@ -1,5 +1,5 @@
 angular.module('viands')
-.controller('HomeController', function ($scope) {
+.controller('HomeController', function ($scope, UserAuth, $state) {
 	navigationBar();
 		execute();
 
