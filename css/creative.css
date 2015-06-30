@@ -123,7 +123,10 @@ aside {
     color: #f05f40!important;
     background-color: transparent;
 }
-
+.navbar-default .nav < li.active<a:hover,
+.navbar-default .nav<li.active<a:focus:hover {
+    background-color: transparent;
+}
 .navbar-default .nav > li.active>a:hover,
 .navbar-default .nav>li.active>a:focus:hover {
     background-color: transparent;

@@ -11,7 +11,6 @@ $(document).ready(function() {
 	
 	});
 
-
 //iphone carousel animation
 $(window).load(function () {
 	$('header').addClass("animated fadeIn");
