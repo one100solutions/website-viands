@@ -2,6 +2,25 @@ angular.module('viands')
 .controller('HomeController', function ($scope) {
 	navigationBar();
 		execute();
+
+        var Home = this;
+        Home.submitForm = function () {
+            var d = UserAuth.login({
+                phone:  Home.user.phone,
+                password:Home.user.password
+            })
+            d.then(function (data) {
+
+                data = data.data;
+                console.log(data)
+
+                if(data.err === false) {
+                    console.log('Logged In')
+                    alertify.success('Logged in')
+                    $state.go('app')
+                }
+            })
+        }
 });
 
 function execute() {
