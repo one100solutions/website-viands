@@ -6,7 +6,8 @@ angular.module('viands',['ui.router'])
 	$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: '../templates/home.partial.html'
+			templateUrl: '../templates/home.partial.html',
+			controller: 'HomeController'
 		})
 		
 		.state('app', {

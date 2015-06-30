@@ -1,10 +1,9 @@
 angular.module('viands')
-.controller('HomeController', function () {	
-	execute();
+.controller('HomeController', function ($scope) {
+		execute();
 });
 
 function execute() {
-	jQuery(document).ready(function($){
 	var $form_modal = $('.cd-user-modal'),
 		$form_login = $form_modal.find('#cd-login'),
 		$form_signup = $form_modal.find('#cd-signup'),
@@ -75,80 +74,26 @@ function execute() {
 		login_selected();
 	});
 
-	function login_selected(){
-		$form_login.addClass('is-selected');
-		$form_signup.removeClass('is-selected');
-		$form_forgot_password.removeClass('is-selected');
-		$tab_login.addClass('selected');
-		$tab_signup.removeClass('selected');
-	}
+    function login_selected(){
+        $form_login.addClass('is-selected');
+        $form_signup.removeClass('is-selected');
+        $form_forgot_password.removeClass('is-selected');
+        $tab_login.addClass('selected');
+        $tab_signup.removeClass('selected');
+    }
 
-	function signup_selected(){
-		$form_login.removeClass('is-selected');
-		$form_signup.addClass('is-selected');
-		$form_forgot_password.removeClass('is-selected');
-		$tab_login.removeClass('selected');
-		$tab_signup.addClass('selected');
-	}
+    function signup_selected(){
+        $form_login.removeClass('is-selected');
+        $form_signup.addClass('is-selected');
+        $form_forgot_password.removeClass('is-selected');
+        $tab_login.removeClass('selected');
+        $tab_signup.addClass('selected');
+    }
 
-	function forgot_password_selected(){
-		$form_login.removeClass('is-selected');
-		$form_signup.removeClass('is-selected');
-		$form_forgot_password.addClass('is-selected');
-	}
-
-	//REMOVE THIS - it's just to show error messages 
-	$form_login.find('input[type="submit"]').on('click', function(event){
-		event.preventDefault();
-		$form_login.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
-	});
-	$form_signup.find('input[type="submit"]').on('click', function(event){
-		event.preventDefault();
-		$form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
-	});
-
-
-	//IE9 placeholder fallback
-	//credits http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
-	if(!Modernizr.input.placeholder){
-		$('[placeholder]').focus(function() {
-			var input = $(this);
-			if (input.val() == input.attr('placeholder')) {
-				input.val('');
-		  	}
-		}).blur(function() {
-		 	var input = $(this);
-		  	if (input.val() == '' || input.val() == input.attr('placeholder')) {
-				input.val(input.attr('placeholder'));
-		  	}
-		}).blur();
-		$('[placeholder]').parents('form').submit(function() {
-		  	$(this).find('[placeholder]').each(function() {
-				var input = $(this);
-				if (input.val() == input.attr('placeholder')) {
-			 		input.val('');
-				}
-		  	})
-		});
-	}
-
-});
-
-
-//credits http://css-tricks.com/snippets/jquery/move-cursor-to-end-of-textarea-or-input/
-jQuery.fn.putCursorAtEnd = function() {
-	return this.each(function() {
-    	// If this function exists...
-    	if (this.setSelectionRange) {
-      		// ... then use it (Doesn't work in IE)
-      		// Double the length because Opera is inconsistent about whether a carriage return is one character or two. Sigh.
-      		var len = $(this).val().length * 2;
-      		this.setSelectionRange(len, len);
-    	} else {
-    		// ... otherwise replace the contents with itself
-    		// (Doesn't work in Google Chrome)
-      		$(this).val($(this).val());
-    	}
-	});
-};
+    function forgot_password_selected(){
+        $form_login.removeClass('is-selected');
+        $form_signup.removeClass('is-selected');
+        $form_forgot_password.addClass('is-selected');
+    }
 }
+

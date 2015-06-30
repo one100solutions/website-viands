@@ -9,6 +9,7 @@ gulp.task('default', function () {
     });
     
     gulp.watch("*.*").on('change', browserSync.reload);
+    gulp.watch("templates/*.*").on('change', browserSync.reload);
     gulp.watch("js/*.*").on('change', browserSync.reload);
     gulp.watch("js/**/*.*").on('change', browserSync.reload);
 });
