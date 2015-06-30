@@ -28,7 +28,7 @@ _/_/_/_/    _/_/_/  _/    _/    _/_/_/    _/_/_/
 #tv_container:after {
     content: '';
     display: block;
-    background: url('../img/tab.png') no-repeat top left transparent;
+    background: url('http://viands.s3.amazonaws.com/web_images/tab.png') no-repeat top left transparent;
     width: 100%;
     height: 100%;
     left: 0px;
@@ -209,7 +209,7 @@ nav.navbar.top{
 header{
 	padding: 150px 0px 0px 0px;
 	height: 960px;
-	background: url('../img/mug3.png');
+	background: url('http://viands.s3.amazonaws.com/web_images/mug3.png');
 	background-color: white!important;
 	background-size: cover;
 	background-position: fixed;
@@ -236,7 +236,7 @@ header .carousel-iphone{
 	margin-left: auto;
 	width: 320px;
 	height: 672px;
-	background: url('../img/iphone-front.png') no-repeat;
+	background: url('http://viands.s3.amazonaws.com/web_images/iphone-front.png') no-repeat;
 	background-size: 100%;
 	
 }
@@ -283,7 +283,7 @@ header .carousel-indicators li {
 .purchase button.app-store{
 	width: 152px;
 	height: 52px;
-	background: url(../img/badge-appstore.png) #3a3a3a no-repeat 0px 5px;
+	background: url(http://viands.s3.amazonaws.com/web_images/badge-appstore.png) #3a3a3a no-repeat 0px 5px;
 	color: white;
 }
 
@@ -295,7 +295,7 @@ header .carousel-indicators li {
 	overflow: hidden;
 	padding: 80px 0px 150px 0px;
 	min-height: 600px;
-	background: url('../img/or.jpg');
+	background: url('http://viands.s3.amazonaws.com/web_images/or.jpg');
 	background-position: center top;
 	background-repeat: repeat-x;
 	color: white;
@@ -352,7 +352,7 @@ header .carousel-indicators li {
 	padding-top: 95px;
 	width: 320px;
 	height: 450px;
-	background: url('../img/iphone-front.png') no-repeat;
+	background: url('http://viands.s3.amazonaws.com/web_images/iphone-front.png') no-repeat;
 	background-size: 100%;
 }
 
@@ -444,7 +444,7 @@ header .carousel-indicators li {
 	overflow: hidden;
 	padding: 80px 0px 150px 0px;
 	min-height: 350px;
-	background: url('../img/sea.jpg');
+	background: url('http://viands.s3.amazonaws.com/web_images/sea.jpg');
 	background-position: center top;
 	background-repeat: repeat-x;
 	color: white;
@@ -479,7 +479,7 @@ header .carousel-indicators li {
 .get-it button.app-store{
 	width: 152px;
 	height: 52px;
-	background: url(../img/badge-appstore.png) #373737 no-repeat 0px 5px;
+	background: url(http://viands.s3.amazonaws.com/web_images/img/badge-appstore.png) #373737 no-repeat 0px 5px;
 	color: white;
 }
 
@@ -609,7 +609,7 @@ header, .social{
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
     /* Retina-specific stuff here */
     .purchasebutton.app-store, .get-it button.app-store{
-        background: url(../img/badge-appstore@2x.png) #3a3a3a no-repeat 0px 5px;
+        background: url(http://viands.s3.amazonaws.com/web_images/badge-appstore@2x.png) #3a3a3a no-repeat 0px 5px;
         background-size: 98%;
     	color: white;
     }
