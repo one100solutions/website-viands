@@ -3,6 +3,7 @@ jQuery(document).ready(function($){
 		$form_login = $form_modal.find('#cd-login'),
 		$form_signup = $form_modal.find('#cd-signup'),
 		$form_forgot_password = $form_modal.find('#cd-reset-password'),
+		$form_otp = $form_modal.find('#cd-otp'),
 		$form_modal_tab = $('.cd-switcher'),
 		$tab_login = $form_modal_tab.children('li').eq(0).children('a'),
 		$tab_signup = $form_modal_tab.children('li').eq(1).children('a'),
@@ -75,6 +76,7 @@ jQuery(document).ready(function($){
 		$form_forgot_password.removeClass('is-selected');
 		$tab_login.addClass('selected');
 		$tab_signup.removeClass('selected');
+		$form_otp.removeClass('selected');
 	}
 
 	function signup_selected(){
@@ -83,14 +85,23 @@ jQuery(document).ready(function($){
 		$form_forgot_password.removeClass('is-selected');
 		$tab_login.removeClass('selected');
 		$tab_signup.addClass('selected');
+		$form_otp.removeClass('selected');
+		
 	}
 
 	function forgot_password_selected(){
 		$form_login.removeClass('is-selected');
 		$form_signup.removeClass('is-selected');
 		$form_forgot_password.addClass('is-selected');
+		$form_otp.removeClass('selected');
 	}
-
+	function otp_selected()
+	{
+		$form_login.removeClass('is-selected');
+		$form_signup.removeClass('is-selected');
+		$form_otp.addClass('is-selected');
+		$form_forgot_password.removeClass('is-selected');
+	}
 	//REMOVE THIS - it's just to show error messages 
 	$form_login.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
@@ -99,6 +110,11 @@ jQuery(document).ready(function($){
 	$form_signup.find('input[type="submit"]').on('click', function(event){
 		event.preventDefault();
 		$form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
+		$form_login.removeClass('is-selected');
+		$form_signup.removeClass('is-selected');
+		$tab_login.removeClass('selected');
+		$form_login.removeClass('is-selected');
+		otp_selected();
 	});
 
 
