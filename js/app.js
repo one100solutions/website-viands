@@ -7,10 +7,11 @@ angular.module('viands',['ui.router'])
 		.state('home', {
 			url: '/home',
 			templateUrl: '../templates/home.partial.html',
-			controller: 'HomeController'
+			controller: 'HomeController as Home'
 		})
 		
 		.state('app', {
-			url: '/app'
+			url: '/app',
+            templateUrl: '../templates/app.partial.html'
 		})	
 });

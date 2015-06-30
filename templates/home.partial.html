@@ -336,16 +336,16 @@ There's finally a way for you to willingly treat your friends without burning a 
 			</ul>
 
 			<div id="cd-login"> <!-- log in form -->
-				<form class="cd-form">
+				<form class="cd-form" ng-submit="Home.submitForm()">
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signin-email">Phone Number</label>
-						<input class="full-width has-padding has-border" id="signin-email" type="text" placeholder="Phone Number">
+						<input ng-model="Home.user.phone" class="full-width has-padding has-border" id="signin-email" type="text" placeholder="Phone Number">
 						<span class="cd-error-message">Error message here!</span>
 					</p>
 
 					<p class="fieldset">
 						<label class="image-replace cd-password" for="signin-password">Password</label>
-						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+						<input ng-model="Home.user.password" class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
 						<a href="#0" class="hide-password">Hide</a>
 						<span class="cd-error-message">Error message here!</span>
 					</p>
@@ -359,6 +359,7 @@ There's finally a way for you to willingly treat your friends without burning a 
 						<input class="full-width" type="submit" value="Login">
 					</p>
 				</form>
+
 				
 				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
 				<!-- <a href="#0" class="cd-close-form">Close</a> -->
