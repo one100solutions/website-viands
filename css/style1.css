@@ -318,11 +318,11 @@ xsigin/signup popup
   }
 }
 
-#cd-login, #cd-signup, #cd-reset-password {
+#cd-login, #cd-signup, #cd-reset-password , #cd-otp{
   display: none;
 }
 
-#cd-login.is-selected, #cd-signup.is-selected, #cd-reset-password.is-selected {
+#cd-login.is-selected, #cd-signup.is-selected, #cd-reset-password.is-selected, #cd-otp.is-selected  {
   display: block;
 }
 
