@@ -163,14 +163,21 @@ nav.navbar{
 nav.navbar.fixed-to-top{
 	top: 0px;
 }
+nav.navbar.top{
+	top: 0px;
+	background:transparent;
+	opacity:0.95;
+	display:block;
+}
 
 .navbar-default{
 	border: none;
 	border-bottom: 1px solid #eee;
-	background: #fff;
+	background: transparent;
 	opacity: 0.95;
 	display: none;
 }
+
 
 .navbar-default .navbar-nav>li>a {
 	color: #aaa;

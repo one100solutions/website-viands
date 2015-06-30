@@ -3,9 +3,13 @@ $(document).ready(function() {
 	$('header').addClass('visibility');
 	$('.carousel-iphone').addClass('visibility');
 	$('.payoff h1').addClass('visibility');
+	
 	$('.features .col-md-4').addClass('visibility');
 	$('.social .col-md-12').addClass('visibility');
-});
+		$('.navbar-default').addClass('top');
+		$('.navbar-default').css('background','transparent');
+	
+	});
 
 
 //iphone carousel animation
@@ -19,13 +23,16 @@ $(window).scroll(function () {
 
 var scrollTop = $(window).scrollTop();
 
-	if (scrollTop > 200) {
-		$('.navbar-default').css('display', 'block');
+	if (scrollTop > 100) {
 		$('.navbar-default').addClass('fixed-to-top');
+		$('.navbar-default').css('background','#fff');
+		$('.navbar-default').css('display', 'block');
+		
 			
 	} else if (scrollTop == 0)   {
 	
-		$('.navbar-default').removeClass('fixed-to-top');
+		$('.navbar-default').addClass('top');
+		$('.navbar-default').css('background','transparent');
 	}
 	
 	
