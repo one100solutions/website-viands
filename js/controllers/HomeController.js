@@ -19,6 +19,10 @@ angular.module('viands')
                     alertify.success('Logged in')
                     $state.go('app')
                 }
+				else if(data.err === true) {
+					console.log(data);
+					alertify.error(data.msg)
+				}
             })
         }
 });
