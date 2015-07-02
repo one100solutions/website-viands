@@ -161,11 +161,11 @@ $(window).resize(function () {
 
 // iPhone Header Carousel
 $('header .carousel').carousel({
-  interval: 3000
+  interval: 300
 })
 
 // iPhone Features Carousel
 $('.detail .carousel').carousel({
-  interval: 4000
+  interval: 1
 })
 
